@@ -1,0 +1,128 @@
+<!--pages/actual/actual.wxml-->
+<!-- 以下是设备详情 -->
+<view class='title1'>
+  <view class='bg_blue shape'>当日生产张数</view>
+  <view class='bg_blue shape'>当前车速</view>
+  <view class='bg_blue shape'>平均车速</view>
+</view>
+<view class='content1'>
+  <view class='bg_yellow shape'>100
+    <text>张</text>
+  </view>
+  <view class='bg_yellow shape'>80
+    <text>米/分</text>
+  </view>
+  <view class='bg_yellow shape'>65
+    <text>米/分</text>
+  </view>
+</view>
+<view class='title1'>
+  <view class='bg_blue shape'>订单良品数</view>
+  <view class='bg_blue shape'>设定切长</view>
+  <view class='bg_blue shape'>捆张</view>
+</view>
+<view class='content1'>
+  <view class='bg_yellow shape'>233
+    <text>张</text>
+  </view>
+  <view class='bg_yellow shape'>145
+    <text>mm</text>
+  </view>
+  <view class='bg_yellow shape'>200
+    <text>张</text>
+  </view>
+</view>
+<view class='title1'>
+  <view class='bg_blue shape'>订单不良品数</view>
+  <view class='bg_blue shape'>实际切长</view>
+  <view class='bg_blue shape'>捆计</view>
+</view>
+<view class='content1'>
+  <view class='bg_yellow shape'>165
+    <text>张</text>
+  </view>
+  <view class='bg_yellow shape'>235
+    <text>mm</text>
+  </view>
+  <view class='bg_yellow shape'>200
+    <text>张</text>
+  </view>
+</view>
+<view class='title1'>
+  <view class='bg_blue shape'>订单剩余数</view>
+  <view class='bg_blue shape'>累计长度</view>
+  <view class='bg_blue shape'>极速</view>
+</view>
+<view class='content1'>
+  <view class='bg_yellow shape'>321
+    <text>张</text>
+  </view>
+  <view class='bg_yellow shape'>133
+    <text>mm</text>
+  </view>
+  <view class='bg_yellow shape'>73
+    <text>米/分</text>
+  </view>
+</view>
+
+<text> \n </text>
+<text> \n </text>
+<!-- 以下是订单详情 -->
+<!--view class='table'>
+  <view class='tr'>
+    <view class='th'>订单号
+      <text>2100</text>
+    </view>
+    <view class='th'>门幅
+      <text>2100</text>
+    </view>
+    <view class='th'>切长
+      <text>2100</text>
+    </view>
+    <view class='th'>张数
+      <text>2100</text>
+    </view>
+    <view class='th'>捆数
+      <text>2100</text>
+    </view>
+    <view class='th'>剖宽1
+      <text>2100</text>
+    </view>
+    <view class='th'>剖宽2
+      <text>2100</text>
+    </view>
+    <view class='th'>剖宽3
+      <text>2100</text>
+    </view>
+  </view>
+</view-->
+
+<view class="page">
+  <!-- 总数 -->
+  <view class="li" bindtap='changeToggle'>
+    <view class="left">总数</view>
+    <view class="right gray">{{order.length}}</view>
+  </view>
+
+  <!--分类 -->
+  <view wx:for="{{order}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
+    <view class="li" data-index="{{index}}" bindtap='changeToggle' >
+      <view class="left">订单{{item.orderid}}</view>
+      <view class="right">
+        <icon type='info' size='20' />
+      </view>
+    </view>
+    <view hidden="{{!selectedFlag[index]}}">
+    <!--view wx:if="{{showIndex != 0}}"-->
+      <view class="bg-gray">
+        <view>门幅：{{item.menfu}}</view>
+        <view>切长：{{item.qiechang}}</view>
+        <view>张数：{{item.zhang}}</view>
+        <view>捆数：{{item.kun}}</view>
+        <view>剖宽1：{{item.pokuan1}}</view>
+        <view>剖宽2：{{item.pokuan2}}</view>
+        <view>剖宽3：{{item.pokuan3}}</view>
+      </view>
+    </view>
+  </view>
+</view>

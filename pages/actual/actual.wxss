@@ -1,0 +1,85 @@
+/* pages/actual/actual.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.title1  {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.content1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.bg_blue {
+  background: lightblue;
+  text-align: center;
+}
+
+.bg_yellow {
+  background: lightyellow;
+  text-align: center;
+}
+
+.shape {
+  width: 33.3%;
+  height: 30px;
+}
+
+.table {
+  border: 1px solid #CCC;
+  width: 100%
+}
+
+.tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.th {
+  width: 25%;
+  font-weight: 900;
+  background:	#D6D6D6;
+  font-size: 14px;
+  color: #00FF;
+  text-align: center;
+  padding: 10px;
+}
+
+/* 列表详情 */
+
+.li {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  width: 92%;
+  padding: 0 4%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.bg-gray{
+    background-color: #ccc!important;
+    border-bottom: 1rpx solid  #fff!important;
+}
+
+.li .icon-xiala ,.icon-shangjiantou {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.gray {
+  color: #8e8e8e;
+}
+
+.red {
+  color: #fe2e2e;
+}

@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/actual/actual",
+    "pages/history/history",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#9ACD32",
+    "list": [
+      {
+        "pagePath": "pages/actual/actual",
+        "text": "实 时",
+        "iconPath": "pages/images/icon/shouye.png",
+        "selectedIconPath": "pages/images/icon/shouye-2.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历 史",
+        "iconPath": "pages/images/icon/lishijilu.png",
+        "selectedIconPath": "pages/images/icon/lishijilu-2.png"
+      }
+    ]
+  }
+}

@@ -1,14 +1,14 @@
 {
-  "pages":[
+  "pages": [
     "pages/actual/actual",
     "pages/history/history",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#bfbfbf",
@@ -27,5 +27,6 @@
         "selectedIconPath": "pages/images/icon/lishijilu-2.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

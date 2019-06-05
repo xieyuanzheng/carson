@@ -1,4 +1,4 @@
 <!--pages/history/history.wxml-->	
-<text>dd</text>
+
 
 <canvas canvas-id='curve-img' style='width:{{canvasWidth}}px;height:{{canvasHeight}}px;'></canvas>

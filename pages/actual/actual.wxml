@@ -1,18 +1,20 @@
 <!--pages/actual/actual.wxml-->
 <!-- 以下是设备详情 -->
+<text> \n </text>
+
 <view class='title1'>
   <view class='bg_blue shape'>当日生产张数</view>
   <view class='bg_blue shape'>当前车速</view>
   <view class='bg_blue shape'>平均车速</view>
 </view>
 <view class='content1'>
-  <view class='bg_yellow shape'>100
+  <view class='bg_yellow shape'>{{weChat_1}}
     <text>张</text>
   </view>
-  <view class='bg_yellow shape'>80
+  <view class='bg_yellow shape'>{{weChat_5}}
     <text>米/分</text>
   </view>
-  <view class='bg_yellow shape'>65
+  <view class='bg_yellow shape'>{{weChat_9}}
     <text>米/分</text>
   </view>
 </view>
@@ -22,13 +24,13 @@
   <view class='bg_blue shape'>捆张</view>
 </view>
 <view class='content1'>
-  <view class='bg_yellow shape'>233
+  <view class='bg_yellow shape'>{{weChat_2}}
     <text>张</text>
   </view>
-  <view class='bg_yellow shape'>145
+  <view class='bg_yellow shape'>{{weChat_6}}
     <text>mm</text>
   </view>
-  <view class='bg_yellow shape'>200
+  <view class='bg_yellow shape'>{{weChat_10}}
     <text>张</text>
   </view>
 </view>
@@ -38,13 +40,13 @@
   <view class='bg_blue shape'>捆计</view>
 </view>
 <view class='content1'>
-  <view class='bg_yellow shape'>165
+  <view class='bg_yellow shape'>{{weChat_3}}
     <text>张</text>
   </view>
-  <view class='bg_yellow shape'>235
+  <view class='bg_yellow shape'>{{weChat_7}}
     <text>mm</text>
   </view>
-  <view class='bg_yellow shape'>200
+  <view class='bg_yellow shape'>{{weChat_11}}
     <text>张</text>
   </view>
 </view>
@@ -54,13 +56,13 @@
   <view class='bg_blue shape'>极速</view>
 </view>
 <view class='content1'>
-  <view class='bg_yellow shape'>321
+  <view class='bg_yellow shape'>{{weChat_4}}
     <text>张</text>
   </view>
-  <view class='bg_yellow shape'>133
+  <view class='bg_yellow shape'>{{weChat_8}}
     <text>mm</text>
   </view>
-  <view class='bg_yellow shape'>73
+  <view class='bg_yellow shape'>{{weChat_12}}
     <text>米/分</text>
   </view>
 </view>
@@ -106,14 +108,14 @@
 
   <!--分类 -->
   <view wx:for="{{order}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
-    <view class="li" data-index="{{index}}" bindtap='changeToggle' >
+    <view class="li" data-index="{{index}}" bindtap='changeToggle'>
       <view class="left">订单{{item.orderid}}</view>
       <view class="right">
         <icon type='info' size='20' />
       </view>
     </view>
     <view hidden="{{!selectedFlag[index]}}">
-    <!--view wx:if="{{showIndex != 0}}"-->
+      <!--view wx:if="{{showIndex != 0}}"-->
       <view class="bg-gray">
         <view>门幅：{{item.menfu}}</view>
         <view>切长：{{item.qiechang}}</view>

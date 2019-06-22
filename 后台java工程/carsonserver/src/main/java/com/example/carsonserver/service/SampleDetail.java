@@ -1,48 +1,20 @@
-package com.example.carsonserver.controller;
+package com.example.carsonserver.service;
 
 import com.example.carsonserver.domain.Detail;
-import com.example.carsonserver.domain.Order;
 import com.example.carsonserver.domain.Sample;
 import com.example.carsonserver.util.DButil;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
-public class ReadAccess {
-
-    @GetMapping("/access")
-    public List<Sample> query(){
-        DButil dButil = new DButil();
-        Sample sample = new Sample();
-        String filePath = "/Users/xieyuanzheng/Desktop/work/private/Sample.accdb";
-        List<Sample> list = dButil.queryData(filePath);
-        return list;
-    }
-
-    @GetMapping("/value")
-    public List queryValue(){
-        DButil dButil = new DButil();
-        Sample sample = new Sample();
-        String filePath = "/Users/xieyuanzheng/Desktop/work/private/Sample.accdb";
-        List<Sample> list = dButil.queryData(filePath);
-        List listvalue = new ArrayList();
-        for(int i=0;i<list.size();i++){
-            String value;
-            value = list.get(i).getValue();
-            listvalue.add(value);
-        }
-        return listvalue;
-    }
-
-    @GetMapping("/detail")
+@Service
+public class SampleDetail {
     public Detail getDetail(){
         DButil dButil = new DButil();
         Sample sample = new Sample();
-        String filePath = "/Users/xieyuanzheng/Desktop/work/private/Sample.accdb";
-        //String filePath = "C:\\miniwechat\\Sample.accdb";
+        //String filePath = "/Users/xieyuanzheng/Desktop/work/private/Sample.accdb";
+        String filePath = "C:\\miniwechat\\Sample.accdb";
         List<Sample> list = dButil.queryData(filePath);
         List listvalue = new ArrayList();
         for(int i=0;i<list.size();i++){
@@ -92,15 +64,5 @@ public class ReadAccess {
         detail.setWeChat_36(listvalue.get(35).toString());
 
         return detail;
-    }
-
-    @GetMapping("/order")
-    public Order getOrder(){
-        DButil dButil = new DButil();
-        Sample sample = new Sample();
-        String filePath = "/Users/xieyuanzheng/Desktop/work/private/Sample.accdb";
-        List<Sample> list = dButil.queryData(filePath);
-
-        return null;
     }
 }
